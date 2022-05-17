@@ -1,0 +1,17 @@
+#btnlogin{
+    display: none;
+}
+#btnlogintoAccount:hover{
+    color: white;
+    background-color: #008FAC !important;
+}
+#btnlogintoAccount:active{
+    color: #FCBF02;
+}
+#btnforgetPassword:hover{
+    color: white;
+    background-color: #008FAC !important;
+}
+#btnforgetPassword:active{
+    color: #FCBF02;
+}

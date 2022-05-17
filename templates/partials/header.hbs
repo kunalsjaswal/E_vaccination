@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="/views/css/header.css">
+<div class="mainHeader">
+  <div class="container-fluid" style="height: 20px; background-color: #008fac">
+  </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-info bg-gradient" id="navar">
+    <div class="container-fluid">
+      <!-- logo -->
+      <a class="navbar-brand" href="/">
+        <div class="logo me-md-5">
+          <img class="img-logo" style="width: 180px" src="/images/logo.png" alt="logo" />
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item me-md-4">
+            <a class="nav-link active" id="home" aria-current="page" href="/">HOME</a>
+          </li>
+
+          <!-- FAQ -->
+          <li class="nav-item me-md-4">
+            <a class="nav-link active" id="faq" href="/faq">FAQ</a>
+          </li>
+          <!-- Verify Certificate -->
+          <li class="nav-item me-md-4">
+            <a class="nav-link active" id="verifycertificate" href="/verifycertificate">VERIFY CERTFICATE</a>
+          </li>
+          <!-- developers -->
+          <li class="nav-item me-md-4">
+            <a class="nav-link active" id="developers" href="/developer">DEVELOPERS</a>
+          </li>
+          <!-- Contact us -->
+          <li class="nav-item me-md-4">
+            <a class="nav-link active" id="contactus" href="/contactus">CONTACT US</a>
+          </li>
+
+        </ul>
+        <form class="d-flex" method="get">
+          <button type="submit" formaction="/signup" class="btn btn-info rounded-pill" id="btnsignup">
+            SIGN UP
+          </button>
+          &nbsp; &nbsp;
+          <button style="margin-right: 15px;" id="btnlogin" type="submit" formaction="/login"
+            class="btn btn-info rounded-pill">
+            LOGIN
+          </button>
+          <button style="margin-right: 15px;" id="btnlogout" type="submit" formaction="/logout"
+            class="btn btn-info rounded-pill">
+            LOGOUT
+          </button>
+          <button style="margin-right: 15px;" id="btnlogoutadmin" type="submit" formaction="/logoutadmin"
+            class="btn btn-info rounded-pill">
+            LOGOUT
+          </button>
+
+        </form>
+        <!-- /search -->
+      </div>
+    </div>
+  </nav>
+
+  <!-- /NavBar -->
+</div>

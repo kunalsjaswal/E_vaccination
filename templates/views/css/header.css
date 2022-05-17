@@ -1,0 +1,32 @@
+.nav-link:hover{
+    background-color: #008FAC;
+    color: white !important;
+   }
+   .nav-link{
+       border-radius: 5px;
+   }
+   #btnsignup,#btnlogin,#btnlogout{
+       font-weight: 500;
+       background-color:#00b7db ;
+       border-color: black;
+       border-width: 1px;
+   }
+   #btnsignup:hover,#btnlogin:hover,#btnlogout:hover{
+       background-color: #008FAC;
+       color: white;
+       border-color: white;
+       border-width: 2px;
+   }
+   /* active */
+   .nav-link:active{
+       background-color: #008FAC;
+       color: #FCBF02 !important;
+      }
+   #btnsignup:active,#btnlogin:active,#btnlogout:active{
+       background-color: #008FAC;
+       color: #FCBF02;
+       border-color:#FCBF02
+   }
+   #btnlogout,#btnlogoutadmin{
+       display: none;
+   }

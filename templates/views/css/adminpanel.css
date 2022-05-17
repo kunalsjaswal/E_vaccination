@@ -1,0 +1,331 @@
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@400;500&display=swap");
+body {
+  font-family: 'Mitr', sans-serif;
+}
+
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+div.heading {
+  margin-top: 3%;
+}
+
+div.heading h1 {
+  font-size: 3vw;
+  font-weight: 400;
+  text-align: center;
+}
+
+section.box1 {
+  padding: 2% 1%;
+  -webkit-box-shadow: 2px 2px 20px rgba(128, 128, 128, 0.658);
+          box-shadow: 2px 2px 20px rgba(128, 128, 128, 0.658);
+  height: auto;
+  width: 80%;
+  margin: auto;
+}
+
+section.box1 div.total_data {
+  width: 50%;
+  margin-left: 10%;
+  font-size: 1.2vw;
+  line-height: 200%;
+  float: left;
+}
+
+section.box1 div.total_data span {
+  color: #0080ff;
+  border-radius: 10px;
+  padding: 0% 2%;
+}
+
+section.box1 div.total_data span:nth-child(1) {
+  padding: 0% 1.5%;
+  margin-left: 0.3%;
+}
+
+section.box1 div.sort_data {
+  float: left;
+  width: 30%;
+  background-color: rgba(128, 128, 128, 0.39);
+  border-radius: 10px;
+}
+
+section.box1 div.sort_data h2 {
+  font-size: 1.8vw;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 3%;
+}
+
+section.box1 div.sort_data div {
+  font-size: 1vw;
+  text-align: center;
+  margin: auto;
+  cursor: pointer;
+  padding: 0.5% 1%;
+  margin-bottom: 2%;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 40%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+section.box1 div.sort_data div.all_users:hover{
+
+  background-color: #0080ffcd;
+  color: white;
+}
+
+section.box1 div.sort_data div.vaccinated_users:hover {
+  background-color: rgba(0, 128, 0, 0.721);
+  color: white;
+}
+
+
+section.box1 div.sort_data div.non_vaccinated_users:hover {
+  background-color: rgba(240, 23, 23, 0.862);
+  color: white;
+}
+
+section.box1 div.clear {
+  clear: both;
+}
+/* change status  */
+section.change_status{
+  margin-top: 4%;
+}
+section.change_status h1{
+  font-size: 2vw;
+  text-align: center;
+  margin-bottom:1% ;
+}
+section.change_status .mainbox{
+  padding: 3% 2%;
+  box-shadow: 2px 2px 20px rgba(128, 128, 128, 0.658);
+  width: 50%;
+  margin: auto;
+
+}
+
+.mainbox form input{
+  margin-left: 10%;
+  font-size: 1vw;
+}
+.mainbox form select{
+  background-color: rgba(128, 128, 128, 0.39);
+  margin-left: 20%;
+  font-size: 1vw;
+}
+.mainbox form button{
+  transition: 0.4s;
+  font-size: 1.2vw;
+
+}
+.mainbox form button:hover{
+  background-color: #0080ffcd;
+  color: white;
+}
+
+
+/* table section  */
+
+section.table {
+  width: 90%;
+  margin: auto;
+  margin-top: 2%;
+  padding: 2% 0%;
+  overflow-x: auto;
+  transition: 0.6s;
+}
+
+section.table#vacc_table{
+  display: none;
+}
+section.table#non_vacc_table{
+  display: none;
+}
+
+section.table table {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-box-shadow: 2px 2px 20px rgba(151, 151, 151, 0.225);
+          box-shadow: 2px 2px 20px rgba(151, 151, 151, 0.225);
+}
+
+
+
+
+section.table table tr {
+  text-align: center;
+}
+
+section.table table td {
+  background-color: rgba(200, 200, 200, 0.504);
+  padding: 0.5%;
+  font-size: 1vw;
+}
+
+section.table table th {
+  padding: 1%;
+  font-size: 1.5vw;
+  font-weight: 500;
+  background-color: #4acaf1;
+}
+
+section.table table tr:hover {
+  background-color: rgba(200, 200, 200, 0.734);
+}
+
+section.table table .thead:hover {
+  background-color: rgba(0, 128, 255, 0);
+}
+
+section.table table td.special {
+  background-color: rgba(0, 128, 0, 0.721);
+  color: white;
+}
+
+section.table table td.special2 {
+  background-color: rgba(240, 23, 23, 0.862);
+  color: white;
+}
+
+@media (max-width: 1000px) {
+  section.box1 div.total_data {
+    font-size: 1.5vw;
+  }
+  section.box1 div.sort_data h2 {
+    font-size: 2vw;
+  }
+  section.box1 div.sort_data div {
+    font-size: 1.4vw;
+    width: 50%;
+  }
+  section.table table th {
+    font-size: 1.6vw;
+  }
+  section.table table td {
+    font-size: 1.2vw;
+  }
+
+  .mainbox form input{
+    margin-left: 10%;
+    font-size: 1.4vw;
+  }
+  .mainbox form select{
+    background-color: rgba(128, 128, 128, 0.39);
+    margin-left: 10%;
+    font-size: 1.4vw;
+  }
+  .mainbox form button{
+    font-size: 1.8vw;
+
+  }
+  section.change_status .mainbox{
+    padding: 3% 1%;
+    width: 60%;
+  }
+  section.change_status h1{
+    font-size: 2.5vw;
+  }
+}
+
+@media (max-width: 768px) {
+  div.heading h1 {
+    font-size: 4vw;
+  }
+  section.box1 {
+    margin-top: 5%;
+  }
+  section.box1 div.total_data {
+    width: 40%;
+    font-size: 2vw;
+  }
+  section.box1 div.sort_data {
+    width: 50%;
+  }
+  section.box1 div.sort_data h2 {
+    font-size: 2.5vw;
+  }
+  section.box1 div.sort_data div {
+    font-size: 2vw;
+    width: 50%;
+  }
+  section.table {
+    width: 96%;
+  }
+  section.table table {
+    width: 150%;
+  }
+  section.table table th {
+    font-size: 2.2vw;
+  }
+  section.table table td {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 520px) {
+  div.heading h1 {
+    font-size: 4.5vw;
+  }
+  section.box1 {
+    width: 90%;
+    margin-top: 5%;
+  }
+  section.box1 div.total_data {
+    width: 45%;
+    font-size: 2.5vw;
+    margin-left: 2%;
+  }
+  section.box1 div.sort_data {
+    width: 50%;
+  }
+  section.box1 div.sort_data h2 {
+    font-size: 3vw;
+  }
+  section.box1 div.sort_data div {
+    font-size: 2.2vw;
+    width: 50%;
+  }
+  section.table {
+    width: 96%;
+  }
+  section.table table {
+    width: 180%;
+  }
+  section.table table th {
+    font-size: 3vw;
+  }
+  section.table table td {
+    font-size: 2.4vw;
+  }
+  .mainbox form input{
+    margin-left: 5%;
+    font-size: 1.8vw;
+  }
+  .mainbox form select{
+    background-color: rgba(128, 128, 128, 0.39);
+    margin-left: 10%;
+    font-size: 1.8vw;
+  }
+  .mainbox form button{
+    font-size: 2.2vw;
+
+  }
+  section.change_status .mainbox {
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=dashboard.css.map */
+#btnlogin,#btnsignup,#btnlogout{
+  display: none;
+}
+#btnlogoutadmin{
+  display: block;
+  border: 1px black solid;
+}

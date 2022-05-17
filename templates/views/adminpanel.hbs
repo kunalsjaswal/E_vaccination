@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    {{>favicon}}
+    <!-- /jquery -->
+
+</head>
+
+<body>
+    {{!-- navbar --}}
+    {{>header}}
+
+
+    <!-- heading  -->
+    <div class="heading">
+        <h1>Admin Panel</h1>
+    </div>
+
+    <!-- box1  -->
+    <section class="box1">
+        <div class="total_data">
+            Total Registered Users : <span>{{total_users}}</span><br>
+            Total Vaccinated Users : <span>{{total_vacc}}</span><br>
+            Non- Vaccinated Users : <span>{{total_non_vacc}}</span>
+        </div>
+
+        <div class="sort_data">
+            <h2>Sort Data</h2>
+            <div class="all_users" onclick="all_users()">All Users</div>
+            <div class="vaccinated_users" onclick="show_vacc()">vaccinated</div>
+            <div class="non_vaccinated_users" onclick="show_non_vacc()">non-vaccinated</div>
+
+        </div>
+        <div class="clear"></div>
+    </section>
+
+    {{!-- change status --}}
+    <section class="change_status">
+        <h1>Change Status of User</h1>
+        <div class="mainbox">
+            <form action="/changestatus" method="post">
+                <input type="number" name="user_id" id="user_id" placeholder="Enter User Id">
+                <select name="getstatus" id="drop_down">
+                    <option value="vaccinated">Vaccinated</option>
+                    <option value="notvaccinated">Not Vaccinated</option>
+                </select>
+                <button type="submit">Change</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- data table  -->
+
+    <section class="table" id="main_tbody">
+        <table>
+            <tr class="thead">
+                <th>User Id.</th>
+                <th>Name</th>
+                <th>ID Photo</th>
+                <th>ID No.</th>
+                <th>Phone No.</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+
+            {{!-- main table --}}
+            <tbody>
+                {{#each users_data as |data|}}
+                <tr>
+                    <td>{{data.id}}</td>
+                    <td>{{data.name}}</td>
+                    <td>{{data.idproof}}</td>
+                    <td>{{data.idnumber}}</td>
+                    <td>{{data.phone}}</td>
+                    <td class="claimedRight" maxlength="15">{{data.dateofvacc}}</td>
+                    {{#if data.statusofVaccination}}
+                    <td class="special">Vaccinated</td>
+                    {{else}}
+                    <td class="special2">Not Vaccinated</td>
+                    {{/if}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </section>
+
+    <section class="table" id="vacc_table">
+
+        {{!-- vaccinated_table --}}
+
+        <table>
+            <tr class="thead">
+                <th>User Id.</th>
+                <th>Name</th>
+                <th>ID Photo</th>
+                <th>ID No.</th>
+                <th>Phone No.</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+            <tbody>
+                {{#each vacc_data as |data|}}
+                <tr>
+                    <td>{{data.id}}</td>
+                    <td>{{data.name}}</td>
+                    <td>{{data.idproof}}</td>
+                    <td>{{data.idnumber}}</td>
+                    <td>{{data.phone}}</td>
+                    <td class="claimedRight" maxlength="15">{{data.dateofvacc}}</td>
+                    {{#if data.statusofVaccination}}
+                    <td class="special">Vaccinated</td>
+                    {{else}}
+                    <td class="special2">Not Vaccinated</td>
+                    {{/if}}
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </section>
+
+    <section class="table" id="non_vacc_table">
+
+        {{!--non- vaccinated_table --}}
+        <table>
+            <tr class="thead">
+                <th>User Id.</th>
+                <th>Name</th>
+                <th>ID Photo</th>
+                <th>ID No.</th>
+                <th>Phone No.</th>
+                <th>Date</th>
+                <th>Status</th>
+            </tr>
+            <tbody>
+                {{#each non_vacc_data as |data|}}
+                <tr>
+                    <td>{{data.id}}</td>
+                    <td>{{data.name}}</td>
+                    <td>{{data.idproof}}</td>
+                    <td>{{data.idnumber}}</td>
+                    <td>{{data.phone}}</td>
+                    <td class="claimedRight" maxlength="15">{{data.dateofvacc}}</td>
+                    {{#if data.statusofVaccination}}
+                    <td class="special">Vaccinated</td>
+                    {{else}}
+                    <td class="special2">Not Vaccinated</td>
+                    {{/if}}
+                    {{/each}}
+            </tbody>
+        </table>
+    </section>
+
+    {{!-- footer --}}
+    {{>footer}}
+    <script>
+
+
+        function show_vacc() {
+            main_tbody.style.display = "none";
+            vacc_table.style.display = "block";
+            non_vacc_table.style.display = "none";
+        }
+
+        function show_non_vacc() {
+            main_tbody.style.display = "none";
+            vacc_table.style.display = "none";
+            non_vacc_table.style.display = "block";
+        }
+        function all_users() {
+            main_tbody.style.display = "block";
+            vacc_table.style.display = "none";
+            non_vacc_table.style.display = "none";
+        }
+
+    </script>
+    <link rel="stylesheet" href="/views/css/adminpanel.css">
+    <script>
+        $(document).ready(function () {
+
+            $('.claimedRight').each(function (f) {
+
+                var newstr = $(this).text().substring(0, 15);
+                $(this).text(newstr);
+
+            });
+        })
+    </script>
+</body>
+
+
+</html>

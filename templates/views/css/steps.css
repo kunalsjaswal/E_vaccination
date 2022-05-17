@@ -1,0 +1,218 @@
+/* steps  */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.steps h1{
+    text-align: center;
+    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+    font-size: 30px;
+    margin-top: 2%;
+    font-weight: normal;
+}
+@media(max-width:600px){
+    .steps h1{
+        font-size: 20px;
+    }
+}
+
+.steps div{
+    margin-top: 2%;
+    float: left;
+    width: 25%;
+    margin-left: 6%;
+    border-top-left-radius: 50px;
+    transition: 0.5s;
+    margin-bottom: 5%;
+}
+.steps div:hover{
+    width: 27%;
+    margin-left: 5%;
+}
+.steps div:hover p{
+   margin-top: 3.5%;
+
+}
+.steps h2{
+    border-top-left-radius: 50px;
+    margin: auto;
+    padding: 2%;
+    text-align: center;
+    background-color: rgba(68, 180, 224, 0.719);
+}
+
+.steps div img{
+    width: 50%;
+    height: 8vw;
+    margin-left: 25%;
+}
+
+.steps div p{
+    transition: 0.5s;
+    text-align: center;
+    padding: 5%;
+    margin-top: 4%;
+    background-color: rgba(68, 180, 224, 0.719);
+    font-size: 1.4vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   border-bottom-right-radius: 60px;
+
+}
+
+
+div.drawarrow1{
+    position: absolute;
+    font-size: 3vw;
+    margin-left: 33%;
+    margin-top: 7%;
+    box-shadow: 0px 0px 0px;
+    width: auto;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: auto;
+    color: rgba(68, 180, 224, 0.719);
+    font-weight: bolder;
+
+
+}
+
+div.drawarrow2{
+    position: absolute;
+    font-size: 3vw;
+    margin-left: 64%;
+    margin-top: 7%;
+    box-shadow: 0px 0px 0px;
+    width: auto;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: auto;
+    color: rgba(68, 180, 224, 0.719);
+    font-weight: bolder;
+}
+div.drawarrow2:hover{
+    width: auto;
+    margin-left: 64%;
+    height: auto;
+}
+div.drawarrow1:hover{
+    height: auto;
+    width: auto;
+    margin-left: 33%;
+}
+
+@media (max-width:1200px) {
+    .steps div p{
+    border-bottom-right-radius: 60px;
+
+    }
+}
+@media (max-width:1000px) {
+    .steps div {
+    border-bottom-right-radius:50px;
+    }
+}
+/* 
+@media (max-width:768px) {
+    .steps div {
+        float: none;
+        margin: auto;
+        margin-top: 10%;
+        border-bottom-right-radius:40px;
+        width: 35%;
+        
+    }
+    div.drawarrow2{
+        color: transparent;   
+        margin-left: 47%;
+        margin-top: 0%;
+    }
+    div.drawarrow1{
+        color: transparent;   
+        margin-left: 47%;
+        margin-top: 0%;
+    }
+    div.drawarrow2::after,div.drawarrow1::after{
+        content: "V";
+        color: rgba(68, 180, 224, 0.719);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .steps div:hover{
+        width: 38%;
+        margin: auto;
+        margin-top: 8%;
+    }
+    
+    } 
+    div.drawarrow2:hover{
+        width: auto;
+        margin-left: 47%;
+        margin-top: 3%;
+        height: auto;
+    }
+    div.drawarrow1:hover{
+        height: auto;
+        margin-top: 3%;
+
+        width: auto;
+        margin-left: 47%;
+    }
+} */
+
+
+
+@media (max-width:768px) {
+    .steps div {
+        float: none;
+        margin: auto;
+        margin-top: 13%;
+        border-bottom-right-radius:30px;
+        width: 55%;
+        height: 35vw;
+    }
+    .steps div img{
+        height: 18vw;
+    }
+    .steps div p{
+        font-size: 3vw;
+        padding: 3%;
+    }
+    div.drawarrow2{
+        color: transparent;   
+        margin-left: 45%;
+        margin-top: 4%;
+        font-size: 5vw;
+    }
+    div.drawarrow1{
+        color: transparent;   
+        font-size: 5vw;
+        margin-left: 45%;
+        margin-top: 4%;
+    }
+    div.drawarrow2::after,div.drawarrow1::after{
+        content: "V";
+        color: rgba(68, 180, 224, 0.719);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    .steps div:hover{
+        width: 58%;
+        margin: auto;
+        margin-top: 13%;
+    }
+    .steps div:hover p{
+       margin-top: 0%;
+    }
+    div.drawarrow2:hover{
+        width: auto;
+        margin-left: 45%;
+        margin-top: 4%;
+        height: auto;
+    }
+    div.drawarrow1:hover{
+        height: auto;
+        margin-top: 4%;
+        width: auto;
+        margin-left: 45%;
+    }
+}

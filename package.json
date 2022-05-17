@@ -1,0 +1,29 @@
+{
+  "name": "vaccination_management_system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhishek300830/Vaccination_Management_System.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhishek300830/Vaccination_Management_System/issues"
+  },
+
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.18.1",
+    "express-session": "^1.17.2",
+    "hbs": "^4.2.0",
+    "mysql2": "^2.3.3",
+    "nodemailer": "^6.7.5",
+    "sequelize": "^6.19.0"
+  }
+}

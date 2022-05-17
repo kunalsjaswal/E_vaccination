@@ -1,0 +1,52 @@
+#btnlogin,#btnsignup{
+    display: none;
+}
+#btnlogout{
+    display: inline-block;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+.name{
+    text-align: center;
+}
+.element{
+    display: inline-flex;
+}
+.imgProfile{
+    margin-top: 10px;
+    width: 120px;
+}
+.regName{
+    display: inline;
+    margin-left: 10%;
+}
+#regStatus{
+    position: absolute;
+    margin-left: 5%;
+    margin-top: -3%;
+}
+
+
+@media (max-width:600px) {
+    .imgProfile{
+        width: 100px;
+    }
+}
+.col{
+    text-align: center;
+}
+.sectionHeight{
+    min-height: 310px;
+}
+@media print {
+    .hidden{
+        display: none !important;
+    }
+    #vaccStatus{
+        color: green;
+        border: 2px solid green;
+    }
+}

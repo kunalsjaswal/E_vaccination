@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/views/css/contactus.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!-- jquery -->
+  <script src="https://kit.fontawesome.com/b39a5f7e00.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <title>Contact Us</title>
+  {{>favicon}}
+</head>
+
+<body>
+  <!-- header  -->
+  {{>header}}
+
+  {{!-- Heading --}}
+  <h1 style="text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif; margin-top: 2%;">Contact Us From Here
+  </h1>
+  
+  <!-- aside  -->
+  <section class="aside"></section>
+
+  <!-- main box  -->
+  {{!-- changes afterwards --}}
+  <section class="mainbox bg-info bg-gradient bg-opacity-75 rounded-3 shadow">
+    <h1>Send a Message</h1>
+    <form action="/sendemail" method="post" >
+      <input type="text" name="fname" id="fname" placeholder="First Name" required />
+      <input type="text" name="lname" id="lname" placeholder="last Name" />
+      <br />
+      <input type="email" name="from" id="email" placeholder="Email Address" required />
+      <input type="number" name="mobile" id="mobile" placeholder="Mobile Number" />
+      <textarea name="msg" id="msg" cols="50s" rows="5" placeholder="Enter Your Message Here.."></textarea>
+      <br />
+      <span class="showmessage" style="color:rgba(255, 0, 0, 0.834);">{{error}}</span>
+    <span class="showmessage" style="color:rgba(0, 128, 0, 0.838);">{{success}}</span> <br>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- boxtop  -->
+  <section class="topbox rounded-1">
+    <h1>Contact Us</h1>
+
+    <div>
+      <i class="fa-solid fa-envelope"></i>
+      <span>carehumanofficial@gmail.com</span>
+    </div>
+    <div><i class="fa-solid fa-phone"></i> <span>+91 9997 8767</span></div>
+    <div>
+      <i class="fa-brands fa-instagram"></i>
+      <span>@Humcare_official</span>
+    </div>
+    <div>
+      <i class="fa-brands fa-twitter"></i>
+      <span>@Humcare</span>
+    </div>
+    <div>
+      <i class="fa-solid fa-globe"></i>
+      <span>www.humcare.com</span>
+    </div>
+  </section>
+  
+
+  <footer id="footer1">
+    <div class="bg-info bg-gradient bg-opacity-75">
+      <div class="container">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom border-dark pb-3 mb-3">
+              <li class="nav-item">
+                <a href="/" class="nav-link px-2 text-dark">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="/adminlogin" class="nav-link px-2 text-dark">Admin panel</a>
+              </li>
+              <li class="nav-item">
+                <a href="/faq" class="nav-link px-2 text-dark">FAQs</a>
+              </li>
+              <li class="nav-item">
+                <a href="/contactus" class="nav-link px-2 text-dark">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a href="/developers" class="nav-link px-2 text-dark">About</a>
+              </li>
+        </ul>
+          <p class="text-center text-dark">
+            © 2022 HumCare, All Right Reserved
+          </p>
+        </footer>
+      </div>
+      <div class="container-fluid" style="height: 40px; background-color: #008fac"></div> 
+    </div>
+     
+
+  </footer>
+
+  <script src="json.js"></script>
+</body>
+
+</html>

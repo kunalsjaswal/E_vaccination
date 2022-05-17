@@ -1,0 +1,192 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <!-- /jquery -->
+  {{!
+  <link rel="stylesheet" href="css/register.css" /> }}
+  {{>favicon}}
+  <script async defer src="/views/js/register.js"></script>
+</head>
+
+<body>
+  <!-- Header -->
+  {{>header}}
+  <!-- /header -->
+  {{!-- heading test --}}
+  <h1 style="text-align: center; margin-top: 2%; font-weight: lighter;">Register New Member
+  </h1>
+  {{!-- Inserted from backend --}}
+  <div style="color: red; text-align: center;">{{notFound}}</div>
+  <div style="color: red; text-align: center;">{{userFound}}</div>
+  <!-- form data -->
+  <div class="container mt-sm-5 mb-sm-5 pt-sm-5 pb-sm-5 shadow-lg p-3 mb-5 bg-body rounded" id="div-formData">
+    <div class="row">
+      <!-- first row of form -->
+      <!-- <div class="col-2">
+          empty space
+        </div> -->
+      <!-- img in side of form -->
+      <div class="col">
+        <img class="mx-auto d-block" id="img-family" src="../images/login-family.svg" alt="family img" />
+      </div>
+      <!-- form -->
+      <div class="col-sm-8 mx-auto">
+        <form action="/dashboard/register" class="row g-3 needs-validation justify-content-center" novalidate
+          method="post">
+          <!-- first name -->
+          <div class="col-md-5 position-relative">
+            <label for="validationTooltip01" class="form-label">Name</label>
+            <input name="regName" type="text" class="form-control" id="validationTooltip01" required />
+            <div class="valid-tooltip">Looks good!</div>
+          </div>
+          <!-- /first name -->
+          <!-- <div class="col-md-5 position-relative">
+              <label for="validationTooltip02" class="form-label"
+                >Last name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="validationTooltip02"
+                required
+              />
+              <div class="valid-tooltip">Looks good!</div>
+            </div> -->
+          <!-- /lastname -->
+          <div class="col-md-5 position-relative">
+            <label for="validationTooltipUsername" class="form-label">PhoneNo</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="validationTooltipUsernamePrepend">+91</span>
+              <input name="regPhone" type="text" class="form-control" id="validationTooltipUsername"
+                aria-describedby="validationTooltipUsernamePrepend" required maxlength="10" />
+
+              <div class="invalid-tooltip">
+                Please choose a unique and valid MobileNo.
+              </div>
+            </div>
+          </div>
+          <!-- /phoneNo   -->
+          <div class="col-md-5 position-relative">
+            <label for="validationTooltip03" class="form-label">Date of Birth</label>
+            <input name="regDOB" type="date" class="form-control" id="validationTooltip03" required />
+            <div class="invalid-tooltip">
+              Please provide a valid Date of Birth.
+            </div>
+          </div>
+          <!-- /date of birth -->
+
+          <div class="col-md-5 position-relative">
+            <label for="validationTooltip04" class="form-label">Gender</label>
+            <select name="regSelectGender" class="form-select" id="validationTooltip04" required>
+              <option selected disabled hidden value="">
+                Select your Gender
+              </option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option>Other</option>
+            </select>
+            <div class="invalid-tooltip">Please select a valid Gender.</div>
+          </div>
+          <!-- /Gender -->
+          <!-- <div class="col-md-5 position-relative">
+              <label for="validationTooltip05" class="form-label">Zip</label>
+              <input
+                type="text"
+                class="form-control"
+                id="validationTooltip05"
+                required
+              />
+              <div class="invalid-tooltip">Please provide a valid zip.</div>
+            </div> -->
+          <!-- /zip -->
+          <div class="col-md-5 position-relative">
+            <label for="validationTooltip04" class="form-label">ID Proof</label>
+            <select name="regSelectID" class="form-select" id="validationTooltip04" required>
+              <option selected disabled hidden value="">
+                Select Your ID
+              </option>
+              <option value="Aadhar Card">Aadhar Card</option>
+              <option value="Pan Card">Pan Card</option>
+              <option value="Voter ID">Voter ID</option>
+              <option value="Driving Licence">Driving Licence</option>
+            </select>
+            <div class="invalid-tooltip">Please select a valid Gender.</div>
+          </div>
+          <!-- /Id proof -->
+          <div class="col-md-5 position-relative">
+            <label for="validationTooltipUsername" class="form-label">ID
+              Number</label>
+            <div class="input-group has-validation">
+              <!-- <span
+                  class="input-group-text"
+                  id="validationTooltipUsernamePrepend"
+                  >+91</span
+                > -->
+              <input name="regIDNumber" type="text" class="form-control" id="validationTooltipUsername"
+                aria-describedby="validationTooltipUsernamePrepend" required />
+
+              <div class="invalid-tooltip">
+                Please choose a unique and valid ID Number.
+              </div>
+            </div>
+          </div>
+          <!-- /ID Number -->
+          <div class="col-md-5 position-relative">
+            <label for="validationTooltip03" class="form-label">Date of
+              Vaccination</label>
+            <input name="regDOV" type="date" class="form-control" id="validationTooltip03" required />
+            <div class="invalid-tooltip">
+              Please provide a valid Date of Vaccination.
+            </div>
+          </div>
+          <!-- /Date of Vaccination -->
+          <div class="col-md-5 position-relative">
+            <label for="validationTooltip04" class="form-label">Slot of
+              Vaccination</label>
+            <select name="regSelectTime" class="form-select" id="validationTooltip04" required>
+              <option selected disabled hidden value="">
+                Select your Slot
+              </option>
+              <option value="10:00 - 12:00">10:00 - 12:00</option>
+              <option value="12:00 - 2:00">12:00 - 2:00</option>
+              <option value="2:00 - 4:00">2:00 - 4:00</option>
+            </select>
+            <div class="invalid-tooltip">Please select a valid Slot.</div>
+          </div>
+          <!-- /Slot of Vaccination -->
+          <!-- submit -->
+          <div class="col-12">
+            <button class="btn btn-info mx-auto d-block" type="submit">
+              Register
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- /form -->
+      <!-- <div class="col-sm-2">
+          empty space  
+        </div> -->
+    </div>
+  </div>
+  <!-- /form data -->
+  <!-- footer -->
+  {{>footer}}
+  <!-- /footer -->
+</body>
+<link rel="stylesheet" href="/views/css/register.css">
+
+</html>

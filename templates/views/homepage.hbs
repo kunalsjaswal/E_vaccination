@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>HumCare</title>
+
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <style>
+    /* bg color */
+    body {
+      background: rgba(188, 238, 249, 0.608);
+    }
+  </style>
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <!-- /jquery -->
+  {{!-- favicon --}}
+  {{>favicon}}
+  <link rel="stylesheet" href="/views/css/slider_style.css">
+  <link rel="stylesheet" href="/views/css/symp.css">
+  <link rel="stylesheet" href="/views/css/steps.css">
+  <script async defer src="views/js/homepage.js"></script>
+</head>
+<!-- class="bg-info bg-gradient bg-opacity-25" -->
+
+<body>
+  <!-- header -->
+  {{!-- <header id="header"></header> --}}
+  {{>header}}
+  <!-- /header -->
+  {{!-- logout render part --}}
+  <div style="color: green; text-align: center;">{{logout}}</div>
+  <!-- Center part -->
+  <div id="carouselExampleCaptions" class="carousel slide bg-dark" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <picture>
+          <source media="(max-width: 600px)" srcset="../images/mobileslide1.jpg">
+          <img src="../images/slide_1.png" alt="slide 1" class="d-block w-100">
+        </picture>
+        {{!-- <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Some representative placeholder content for the first slide.</p>
+        </div> --}}
+      </div>
+      <div class="carousel-item">
+        <picture>
+          <source media="(max-width: 600px)" srcset="../images/mobileslide2.jpg">
+          <img src="../images/slide_2.png" alt="slide 2" class="d-block w-100">
+        </picture>
+        {{!-- <div class="carousel-caption d-none d-md-block">
+          <h5>Second slide label</h5>
+          <p>Some representative placeholder content for the second slide.</p>
+        </div> --}}
+      </div>
+      {{!-- <div class="carousel-item">
+        <img src="../images/slide_3.png" class="d-block w-100" alt="..." />
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Third slide label</h5>
+          <p>Some representative placeholder content for the third slide.</p>
+        </div>
+      </div> --}}
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- /center part -->
+  {{!-- steps to vacc --}}
+  <section class="steps">
+    <h1>Get Vaccinated in Simple 3 Steps</h1>
+    <div>
+      <h2>Step 1</h2>
+      <img src="../images/img/step1.png" alt="" />
+      <p>Register Yourself</p>
+    </div>
+    <div class="drawarrow1">></div>
+
+    <div>
+      <h2>Step 2</h2>
+      <img src="../images/img/step2.png" alt="" />
+      <p>Book your slot</p>
+    </div>
+    <div class="drawarrow2">></div>
+
+    <div>
+      <h2>Step 3</h2>
+      <img src="../images/img/step3.png" alt="" />
+      <p>Get vaccinated</p>
+    </div>
+  </section>
+  {{!-- /steps to vacc --}}
+  <!-- slider  -->
+  <section class="vacc_avail2">
+    <h1>Vaccination Available</h1>
+  </section>
+  <section class="vacc_avail rounded-5">
+    <div class="vacc">
+      <div>
+        <h2>Malaria</h2>
+        <img src="/images/img/malaria.jpg" alt="" />
+      </div>
+      <div>
+        <h2>Covid</h2>
+        <img src="/images/img/covid.jpg" alt="" />
+      </div>
+      <div>
+        <h2>Typhoid</h2>
+        <img src="/images/img/typhoid.jpg" alt="" />
+      </div>
+      <div>
+        <h2>Rabies</h2>
+        <img src="/images/img/rabies.jpg" alt="" />
+      </div>
+      <div>
+        <h2>Fever</h2>
+        <img src="/images/img/fever.jpg" />
+      </div>
+      <div>
+        <h2>Chickenpox</h2>
+        <img src="/images/img/chickenpox.jpg" alt="" />
+      </div>
+      <div>
+        <h2>Dengue</h2>
+        <img src="/images/img/dengue.png" alt="" />
+      </div>
+      <div>
+        <h2>Cholera</h2>
+        <img src="/images/img/cholera.jpg" alt="" />
+      </div>
+    </div>
+  </section>
+  {{!-- /slider --}}
+
+  <!-- symptoms and precautions -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <section class="symptoms">
+    <h1 data-aos="zoom-in" data-aos-duration="2000">
+      Symptoms / Precautions
+    </h1>
+
+    <article class="grids">
+      <!-- malaria  -->
+      <div data-aos="slide-right" data-aos-duration="2000">
+        <h2>Malaria</h2>
+        <div class="symp">
+          <h3>Symptoms</h3>
+          <ul>
+            <li>Fever</li>
+            <li>Chill</li>
+            <li>Headache</li>
+            <li>Nausea and vomiting</li>
+            {{!-- <li>Abdominal pain</li> --}}
+          </ul>
+        </div>
+        <div class="prec">
+          <h3>precautions</h3>
+          <ul>
+            <li>
+              Apply mosquito repellent with diethyltoluamide to exposed
+              skin.
+            </li>
+            <li>Drape mosquito netting over beds</li>
+            <li>Put screens on windows and doors</li>
+            <li>
+              Treat clothing, mosquito nets, sleeping bags and other
+              fabrics with an insect repellent called permethrin
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- covid  -->
+      <div data-aos="slide-left" data-aos-duration="2000">
+        <h2>Covid</h2>
+        <div class="symp">
+          <h3>Symptoms</h3>
+          <ul>
+            <li>Fever</li>
+            <li>Difficulty breathing</li>
+            <li>Chest pain</li>
+            <li>Loss of taste or smell</li>
+            <li>Shortness of breath</li>
+          </ul>
+        </div>
+        <div class="prec">
+          <h3>Precautions</h3>
+
+          <ul>
+            <li>Contact doctor if symptoms persist</li>
+            <li>Cover your mouth when coughing or sneezing</li>
+            <li>Avoid close contact those who are displaying symptoms</li>
+            <li>Avoid close contact with people who are infected</li>
+            <li>
+              Wash your hands thoroughly with soap and warm water or with an
+              alcohol-based hand sanitizer
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- typhoid  -->
+      <div data-aos="slide-right" data-aos-duration="2000">
+        <h2>Typhoid</h2>
+        <div class="symp">
+          <h3>Symptoms</h3>
+
+          <ul>
+            <li>Prolonged high fever</li>
+            <li>Headache</li>
+            <li>Reduced appetite</li>
+            <li>Constipation (mostly in adults)</li>
+            <li>Diarrhoea (mostly in children)</li>
+          </ul>
+        </div>
+        <div class="prec">
+          <h3>Precautions</h3>
+
+          <ul>
+            <li>Contact doctor if symptoms persist</li>
+            <li>
+              Make sure to clean your water puriifier and water tank on a
+              regular basis to prevent the growth of germs.
+            </li>
+
+            <li>
+              Refrain from having oral or anal sex with a person who has
+              typhoid or who has recently recovered from it.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- rabies  -->
+      <div data-aos="slide-left" data-aos-duration="2000">
+        <h2>Rabies</h2>
+        <div class="symp">
+          <h3>Symptoms</h3>
+
+          <ul>
+            <li>fever</li>
+            <li>Headache</li>
+            <li>Nausea</li>
+            <li>Weakness</li>
+            <li>Burning sensation at infected site</li>
+          </ul>
+        </div>
+        <div class="prec">
+          <h3>Precautions</h3>
+
+          <ul>
+            <li>Vaccinate your pets</li>
+            <li>
+              Get rabies vaccination before travelling to places where rabies
+              is prevalent.
+            </li>
+            <li>Report stray animals to local authorities.</li>
+            <li>Keep bats out of living spaces.</li>
+            <li>Avoid contact with wild animals.</li>
+          </ul>
+        </div>
+      </div>
+      <div id="expand" onclick="expand_fnx()">Show More</div>
+      <!--for > 900px-->
+      <div id="expand2" onclick="expand_fnx2()">Show More</div>
+      <!--for < 520px-->
+      <div id="expand3" onclick="expand_fnx3()">Show More</div>
+      <!--for > 520px  < 900px -->
+    </article>
+
+    <div id="showmore">
+      <!-- fever  -->
+      <div data-aos="slide-right" data-aos-duration="2000">
+        <h2>Fever</h2>
+        <div class="symp">
+          <h3>Symptoms</h3>
+
+          <ul>
+            <li>dehydration</li>
+            <li>Headache</li>
+            <li>loss of appetite</li>
+            <li>Weakness</li>
+            <li>sweating</li>
+          </ul>
+        </div>
+        <div class="prec">
+          <h3>Precautions</h3>
+          <ul>
+            <li>
+              taking a regular bath or a sponge bath using lukewarm water
+            </li>
+            <li>
+              making sure the room temperature where the person is resting is
+              comfortable
+            </li>
+            <li>taking acetaminophen (Tylenol) or ibuprofen (Advil)</li>
+            <li>drinking plenty of fluids</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- chickenpox  -->
+      <div data-aos="slide-left" data-aos-duration="2000">
+        <h2>Chickenpox</h2>
+        <div class="symp">
+          <h3>Symptoms</h3>
+
+          <ul>
+            <li>Feeling tired</li>
+            <li>Fever</li>
+            <li>
+              A skin rash that is very itchy and looks like many small
+              blisters.
+            </li>
+            <li>Spots that fade away.</li>
+          </ul>
+        </div>
+        <div class="prec">
+          <h3>Precautions</h3>
+          <ul>
+            <li>Press a cool, moist rag on the rash.</li>
+            <li>Keep your child cool.</li>
+
+            <li>
+              Put a lotion with antihistamines on the rash. These lotions are
+              available at the drugstore. If you don't know what to buy, ask
+              the pharmacist for help.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- dengue  -->
+      <div data-aos="slide-right" data-aos-duration="2000">
+        <h2>Dengue</h2>
+        <div class="symp">
+          <h3>Symptoms</h3>
+
+          <ul>
+            <li>Sudden, high fever</li>
+            <li>Severe Headache</li>
+            <li>Pain behind the eyes</li>
+            <li>
+              Skin rash, which appears two to five days after the onset of
+              fever
+            </li>
+            <li>Vomiting</li>
+          </ul>
+        </div>
+
+        <div class="prec">
+          <h3>Precautions</h3>
+          <ul>
+            <li>Heavily scented soaps and perfumes may attract mosquitos.</li>
+            <li>
+              Try to avoid being outside at dawn, dusk, and early evening.
+            </li>
+            <li>
+              Treat clothes, shoes, and camping gear with permethrin, or
+              purchase clothes that have been pretreated.
+            </li>
+            <li>
+              tructural barriers, such as screens or netting, can keep
+              mosquitos out.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- cholera  -->
+      <div data-aos="slide-left" data-aos-duration="2000">
+        <h2>Cholera</h2>
+        <div class="symp">
+          <h3>Symptoms</h3>
+
+          <ul>
+            <li>Rapid heart rate</li>
+            <li>Low blood pressure</li>
+            <li>Thirst</li>
+            <li>
+              Loss of skin elasticity (the ability to return to original
+              position quickly if pinched)
+            </li>
+          </ul>
+        </div>
+        <div class="prec">
+          <h3>Precautions</h3>
+          <ul>
+            <li>
+              Avoid tap water, water fountains and ice cubes. This precaution
+              applies to water you drink and water you use to wash dishes,
+              prepare food and brush your teeth.
+            </li>
+            <li>Don't eat raw or undercooked seafood.</li>
+            <li>
+              Eat prepackaged foods. Or make sure other foods are freshly
+              cooked and served hot.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{!-- /symptoms and precautions --}}
+  <div id="symptoms"></div>
+
+  <!-- footer -->
+  <br>
+  {{!-- <div id="footer"></div> --}}
+  {{>footer}}
+  <!-- /footer -->
+
+  {{!-- form animations of symtoms and precautions --}}
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="/views/js/scriptsym.js"></script>
+</body>
+
+</html>
